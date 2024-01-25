@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ErrorResponse {
+  path: String!
+  message: String!
+}
+
+type Query {
+  hello: String!
+}
+
+type Mutation {
+  signup(signupInput: SignupInput!): [ErrorResponse!]
+  login(loginInput: LoginInput!): [ErrorResponse!]
+  logout: Boolean!
+  createPoll(name: String!, options: [String!]!): Boolean!
+}
+
+"""Signup Input"""
+input SignupInput {
+  userName: String!
+  email: String!
+  password: String!
+}
+
+"""Login Input"""
+input LoginInput {
+  email: String!
+  password: String!
+}
